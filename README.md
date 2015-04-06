@@ -1,3 +1,5 @@
+This is a fork of ErikZalm/Marlin which contains changes for my specific printer (which is a NopHead Mendel90 fitted with an E3D head, a Z-Probe and lever switches instead of the usual microswitches). You can use this code if you wish but please be sure to configure appropriately for your printer before compiling. I will modify this as and when I make further changes to my printer.
+
 # Marlin 3D Printer Firmware
 <img align="right" src="Documentation/Logo/Marlin%20Logo%20GitHub.png" />
 
@@ -38,7 +40,7 @@ __Google Hangout:__ <a href="https://plus.google.com/hangouts/_/g2wp5duzb2y6ahik
 The current Marlin dev team consists of:
 
  - Scott Lahteine [@thinkyhead]
- - 
+ -
 
 Sprinters lead developers are Kliment and caru.
 Grbl's lead developer is Simen Svale Skogsrud.
