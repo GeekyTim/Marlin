@@ -564,7 +564,7 @@ const short temptable_10[][2] PROGMEM = {
 };
 #endif
 
-#if (THERMISTORHEATER_0 == 11) || (THERMISTORHEATER_1 == 11) || (THERMISTORHEATER_2 == 11) || (THERMISTORHEATER_3 == 11) || (THERMISTORBED == 11) 
+#if (THERMISTORHEATER_0 == 11) || (THERMISTORHEATER_1 == 11) || (THERMISTORHEATER_2 == 11) || (THERMISTORHEATER_3 == 11) || (THERMISTORBED == 11)
 // QU-BD silicone bed QWG-104F-3950 thermistor
 
 const short temptable_11[][2] PROGMEM = {
@@ -828,7 +828,7 @@ const short temptable_51[][2] PROGMEM = {
 };
 #endif
 
-#if (THERMISTORHEATER_0 == 52) || (THERMISTORHEATER_1 == 52) || (THERMISTORHEATER_2 == 52) || (THERMISTORHEATER_3 == 52) || (THERMISTORBED == 52) 
+#if (THERMISTORHEATER_0 == 52) || (THERMISTORHEATER_1 == 52) || (THERMISTORHEATER_2 == 52) || (THERMISTORHEATER_3 == 52) || (THERMISTORBED == 52)
 // 200k ATC Semitec 204GT-2 (WITH 1kohm RESISTOR FOR PULLUP, R9 ON SANGUINOLOLU! NOT FOR 4.7kohm PULLUP! THIS IS NOT NORMAL!)
 // Verified by linagee. Source: http://shop.arcol.hu/static/datasheets/thermistors.pdf
 // Calculated using 1kohm pullup, voltage divider math, and manufacturer provided temp/resistance
@@ -869,7 +869,7 @@ const short temptable_52[][2] PROGMEM = {
 };
 #endif
 
-#if (THERMISTORHEATER_0 == 55) || (THERMISTORHEATER_1 == 55) || (THERMISTORHEATER_2 == 55) || (THERMISTORHEATER_3 == 55) || (THERMISTORBED == 55) 
+#if (THERMISTORHEATER_0 == 55) || (THERMISTORHEATER_1 == 55) || (THERMISTORHEATER_2 == 55) || (THERMISTORHEATER_3 == 55) || (THERMISTORBED == 55)
 // 100k ATC Semitec 104GT-2 (Used on ParCan) (WITH 1kohm RESISTOR FOR PULLUP, R9 ON SANGUINOLOLU! NOT FOR 4.7kohm PULLUP! THIS IS NOT NORMAL!)
 // Verified by linagee. Source: http://shop.arcol.hu/static/datasheets/thermistors.pdf
 // Calculated using 1kohm pullup, voltage divider math, and manufacturer provided temp/resistance
@@ -911,7 +911,7 @@ const short temptable_55[][2] PROGMEM = {
 #endif
 
 #if (THERMISTORHEATER_0 == 60) || (THERMISTORHEATER_1 == 60) || (THERMISTORHEATER_2 == 60) || (THERMISTORHEATER_3 == 60) || (THERMISTORBED == 60) // Maker's Tool Works Kapton Bed Thermister
-// ./createTemperatureLookup.py --r0=100000 --t0=25 --r1=0 --r2=4700 --beta=3950 
+// ./createTemperatureLookup.py --r0=100000 --t0=25 --r1=0 --r2=4700 --beta=3950
 // r0: 100000
 // t0: 25
 // r1: 0 (parallel with rTherm)
@@ -994,7 +994,7 @@ const short temptable_60[][2] PROGMEM = {
    {1008*OVERSAMPLENR, 0},
 };
 #endif
-#if (THERMISTORBED == 12) 
+#if (THERMISTORBED == 12)
 //100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup) (calibrated for Makibox hot bed)
 const short temptable_12[][2] PROGMEM = {
    {35*OVERSAMPLENR, 180}, //top rating 180C
@@ -1030,8 +1030,55 @@ const short temptable_12[][2] PROGMEM = {
 };
 #endif
 
+
+#if (THERMISTORBED == 99) // Epcos B57861S 104F 40 100K on Mendel90 bed, max temp 115
+const short temptable_99[][2] PROGMEM = {
+    {     982,       200     }, // r=   300 adc=61.38
+    {    1091,       195     }, // r=   336 adc=68.19
+    {    1214,       190     }, // r=   376 adc=75.84
+    {    1351,       185     }, // r=   423 adc=84.46
+    {    1506,       180     }, // r=   476 adc=94.15
+    {    1681,       175     }, // r=   538 adc=105.06
+    {    1877,       170     }, // r=   609 adc=117.34
+    {    2098,       165     }, // r=   691 adc=131.13
+    {    2346,       160     }, // r=   786 adc=146.61
+    {    2623,       155     }, // r=   897 adc=163.95
+    {    2933,       150     }, // r=  1026 adc=183.33
+    {    3279,       145     }, // r=  1177 adc=204.93
+    {    3662,       140     }, // r=  1355 adc=228.90
+    {    4086,       135     }, // r=  1564 adc=255.39
+    {    4552,       130     }, // r=  1810 adc=284.48
+    {    5060,       125     }, // r=  2103 adc=316.24
+    {    5610,       120     }, // r=  2451 adc=350.62
+    {    6200,       115     }, // r=  2866 adc=387.52
+    {    6828,       110     }, // r=  3364 adc=426.72
+    {    7486,       105     }, // r=  3962 adc=467.90
+    {    8170,       100     }, // r=  4684 adc=510.63
+    {    8870,        95     }, // r=  5559 adc=554.35
+    {    9575,        90     }, // r=  6625 adc=598.45
+    {   10276,        85     }, // r=  7928 adc=642.25
+    {   10961,        80     }, // r=  9528 adc=685.06
+    {   11620,        75     }, // r= 11501 adc=726.23
+    {   12242,        70     }, // r= 13947 adc=765.15
+    {   12822,        65     }, // r= 16994 adc=801.36
+    {   13352,        60     }, // r= 20807 adc=834.50
+    {   13830,        55     }, // r= 25606 adc=864.35
+    {   14253,        50     }, // r= 31678 adc=890.83
+    {   14624,        45     }, // r= 39403 adc=913.98
+    {   14943,        40     }, // r= 49289 adc=933.94
+    {   15215,        35     }, // r= 62016 adc=950.93
+    {   15443,        30     }, // r= 78504 adc=965.21
+    {   15633,        25     }, // r=100000 adc=977.08
+    {   15789,        20     }, // r=128214 adc=986.83
+    {   15916,        15     }, // r=165504 adc=994.75
+    {   16018,        10     }, // r=215143 adc=1001.13
+    {   16099,         5     }, // r=281716 adc=1006.21
+    {   16164,         0     }, // r=371694 adc=1010.23
+};
+#endif
+
 // Pt1000 and Pt100 handling
-// 
+//
 // Rt=R0*(1+a*T+b*T*T) [for T>0]
 // a=3.9083E-3, b=-5.775E-7
 
@@ -1043,7 +1090,7 @@ const short temptable_12[][2] PROGMEM = {
 
 #if (THERMISTORHEATER_0 == 110) || (THERMISTORHEATER_1 == 110) || (THERMISTORHEATER_2 == 110) || (THERMISTORHEATER_3 == 110) || (THERMISTORBED == 110) // Pt100 with 1k0 pullup
 const short temptable_110[][2] PROGMEM = {
-// only few values are needed as the curve is very flat  
+// only few values are needed as the curve is very flat
   PtLine(0,100,1000)
   PtLine(50,100,1000)
   PtLine(100,100,1000)
@@ -1055,7 +1102,7 @@ const short temptable_110[][2] PROGMEM = {
 #endif
 #if (THERMISTORHEATER_0 == 147) || (THERMISTORHEATER_1 == 147) || (THERMISTORHEATER_2 == 147) || (THERMISTORHEATER_3 == 147) || (THERMISTORBED == 147) // Pt100 with 4k7 pullup
 const short temptable_147[][2] PROGMEM = {
-// only few values are needed as the curve is very flat  
+// only few values are needed as the curve is very flat
   PtLine(0,100,4700)
   PtLine(50,100,4700)
   PtLine(100,100,4700)
@@ -1084,7 +1131,7 @@ const short temptable_1010[][2] PROGMEM = {
 #endif
 #if (THERMISTORHEATER_0 == 1047) || (THERMISTORHEATER_1 == 1047) || (THERMISTORHEATER_2 == 1047) || (THERMISTORHEATER_3 == 1047) || (THERMISTORBED == 1047) // Pt1000 with 4k7 pullup
 const short temptable_1047[][2] PROGMEM = {
-// only few values are needed as the curve is very flat  
+// only few values are needed as the curve is very flat
   PtLine(0,1000,4700)
   PtLine(50,1000,4700)
   PtLine(100,1000,4700)
