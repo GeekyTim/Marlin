@@ -240,7 +240,7 @@ Here are some standard links for getting your machine calibrated:
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 //
 //#define BED_LIMIT_SWITCHING
 
@@ -253,11 +253,16 @@ Here are some standard links for getting your machine calibrated:
 //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
 #ifdef PIDTEMPBED
+// Mendel 90 heated bed @65
+    #define  DEFAULT_bedKp 203.78
+    #define  DEFAULT_bedKi 38.39
+    #define  DEFAULT_bedKd 270.45
+
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-    #define  DEFAULT_bedKp 10.00
-    #define  DEFAULT_bedKi .023
-    #define  DEFAULT_bedKd 305.4
+//    #define  DEFAULT_bedKp 10.00
+//    #define  DEFAULT_bedKi .023
+//    #define  DEFAULT_bedKd 305.4
 
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
