@@ -455,10 +455,10 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 
   #ifdef AUTO_BED_LEVELING_GRID
 
-    #define LEFT_PROBE_BED_POSITION -50
-    #define RIGHT_PROBE_BED_POSITION 50
-    #define FRONT_PROBE_BED_POSITION -20 // Actually the back
-    #define BACK_PROBE_BED_POSITION 50 // Actually the front
+    #define LEFT_PROBE_BED_POSITION -85 // Actually the right
+    #define RIGHT_PROBE_BED_POSITION 25 // Actually left
+    #define FRONT_PROBE_BED_POSITION -25 // Actually the back
+    #define BACK_PROBE_BED_POSITION 95 // Actually the front
 
     #define MIN_PROBE_EDGE 10 // The probe square sides can be no smaller than this
 
@@ -470,12 +470,12 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 
       // Arbitrary points to probe. A simple cross-product
       // is used to estimate the plane of the bed.
-      #define ABL_PROBE_PT_1_X -50
-      #define ABL_PROBE_PT_1_Y 50
-      #define ABL_PROBE_PT_2_X -50
-      #define ABL_PROBE_PT_2_Y -20
-      #define ABL_PROBE_PT_3_X 50
-      #define ABL_PROBE_PT_3_Y -20
+      #define ABL_PROBE_PT_1_X -85
+      #define ABL_PROBE_PT_1_Y 95
+      #define ABL_PROBE_PT_2_X -85
+      #define ABL_PROBE_PT_2_Y -25
+      #define ABL_PROBE_PT_3_X 25
+      #define ABL_PROBE_PT_3_Y -25
 
   #endif // AUTO_BED_LEVELING_GRID
 
