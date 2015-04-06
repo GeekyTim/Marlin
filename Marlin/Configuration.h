@@ -191,11 +191,31 @@ Here are some standard links for getting your machine calibrated:
   #define PID_INTEGRAL_DRIVE_MAX PID_MAX  //limit for the integral term
   #define K1 0.95 //smoothing factor within the PID
 
+// E3D-V6 @ 230
+//  #define  DEFAULT_Kp 13.72
+//  #define  DEFAULT_Ki 1.20
+//  #define  DEFAULT_Kd 39.32
+
+// E3D-V6 @ 220
+  #define  DEFAULT_Kp 18.3
+  #define  DEFAULT_Ki 1.75
+  #define  DEFAULT_Kd 47.97
+
+// E3D-V6 @ 195
+//  #define  DEFAULT_Kp 23.64
+//  #define  DEFAULT_Ki 2.36
+//  #define  DEFAULT_Kd 59.26
+
+// J-Head Mk V-B
+//    #define  DEFAULT_Kp 25.05
+//    #define  DEFAULT_Ki 2.30
+//    #define  DEFAULT_Kd 68.15
+
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 // Ultimaker
-    #define  DEFAULT_Kp 22.2
-    #define  DEFAULT_Ki 1.08
-    #define  DEFAULT_Kd 114
+//    #define  DEFAULT_Kp 22.2
+//    #define  DEFAULT_Ki 1.08
+//    #define  DEFAULT_Kd 114
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
